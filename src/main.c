@@ -21,6 +21,7 @@ int main(void)
   HAL_Init();
   stm32_clock_init(RCC_PLL_MUL9);
   LightSensor_Init();
+  OLED_Init();
 
   __HAL_RCC_GPIOA_CLK_ENABLE();
   GPIO_InitTypeDef gpioInit;
@@ -30,6 +31,8 @@ int main(void)
   gpioInit.Speed = GPIO_SPEED_HIGH;
   HAL_GPIO_Init(GPIOA, &gpioInit);
   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
+
+  OLED_ShowString(1, 1, "Hello, OLED!");
   while (1)
   {
     if (LightSensor_Get())

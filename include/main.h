@@ -3,5 +3,6 @@
 
 #include "stm32f1xx_hal.h"
 #include "System.h"
+#include "OLED.h"
 
 #endif // MAIN_H
