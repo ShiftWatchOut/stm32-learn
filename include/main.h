@@ -3,6 +3,8 @@
 
 #include "stm32f1xx_hal.h"
 #include "System.h"
+#include "LightSensor.h"
 #include "OLED.h"
+#include "LED.h"
 
 #endif // MAIN_H

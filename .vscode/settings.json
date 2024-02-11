@@ -7,6 +7,10 @@
     "stm32f1xx_hal.h": "c",
     "stm32f1xx_hal_conf.h": "c",
     "main.h": "c",
-    "system.h": "c"
+    "system.h": "c",
+    "lightsensor.h": "c",
+    "oled.h": "c",
+    "oled_font.h": "c",
+    "led.h": "c"
   }
 }
