@@ -3,7 +3,7 @@
 
 #include "stm32f1xx_hal.h"
 #include "System.h"
-#include "LightSensor.h"
+#include "RotaryEncoder.h"
 #include "OLED.h"
 #include "LED.h"
 
