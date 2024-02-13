@@ -4,6 +4,7 @@ int main(void)
 {
   HAL_Init();
   stm32_clock_init(RCC_PLL_MUL9);
+  SysTick_Init();
   LightSensor_Init();
   OLED_Init();
 
@@ -16,9 +17,4 @@ int main(void)
     Toggle_Test(LightSensor_Get());
   }
   return 0;
-}
-
-void SysTick_Handler(void)
-{
-  HAL_IncTick();
 }

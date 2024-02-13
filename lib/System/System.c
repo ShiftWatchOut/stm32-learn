@@ -34,3 +34,25 @@ void hold(void)
   {
   }
 }
+
+/// @brief 启动系统滴答定时器 SysTick
+/// @param
+void SysTick_Init(void)
+{
+  /* SystemFrequency / 1000    1ms中断一次
+   * SystemFrequency / 100000  10us中断一次
+   * SystemFrequency / 1000000 1us中断一次
+   * 注意内部设置系统时钟优先级
+   */
+  if (HAL_SYSTICK_Config(SystemCoreClock / 1000))
+  {
+    while (1)
+    {
+    }
+  }
+}
+
+void SysTick_Handler(void)
+{
+  HAL_IncTick();
+}
